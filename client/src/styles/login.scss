@@ -1,0 +1,377 @@
+// Variables
+$checkbox-size: 20px;
+$checkbox-border: #cecece;
+$checkbox-selected: #02bb72;
+
+.login-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .__padding {
+    height: auto;
+  }
+
+  .login-content {
+    .form-contents {
+      width: 480px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #101828;
+        line-height: 39px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .tag {
+        margin-top: 0.4rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #667085;
+        text-align: left;
+        width: 100%;
+      }
+
+      .errorMessage {
+        font-size: 1rem;
+        font-weight: 600;
+        color: red;
+        line-height: 39px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .form-input {
+        width: 100%;
+        .label {
+          font-size: 14px;
+          font-weight: 500;
+          color: #344054;
+        }
+      }
+    }
+    .forgot-form-contents {
+      width: 480px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+
+      @media (max-width: 500px) {
+        width: 360px;
+      }
+
+      .title {
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: #101828;
+        line-height: 39px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .tag {
+        margin-top: 0.4rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #667085;
+        text-align: left;
+        width: 100%;
+      }
+
+      .form-input {
+        width: 100%;
+        .label {
+          font-size: 14px;
+          font-weight: 500;
+          color: #344054;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .login-container {
+    .login-content {
+      margin-top: 60px;
+      align-items: flex-start;
+
+      .form-contents {
+        .title {
+          font-size: 20px;
+        }
+
+        .tag {
+          font-size: 18px;
+          font-weight: 400;
+          color: '#667085';
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    .login-content {
+      margin-top: 60px;
+      align-items: flex-start;
+      align-items: center;
+
+      .form-contents {
+        .title {
+          font-size: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    .login-content {
+      .form-contents {
+        width: 94%;
+      }
+    }
+  }
+}
+
+.buttonStyle {
+  width: 93%;
+  background: #7f56d9;
+  color: #fff;
+  font-size: 1.2rem;
+  height: 50px;
+  border-radius: 8px;
+  box-shadow: none;
+  text-transform: capitalize;
+  margin-top: 0rem;
+  border: none;
+
+  &:hover {
+    background-color: #5d3cb289;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    border: 1px solid rgba(93, 60, 178, 0.4);
+    background-color: rgba(93, 60, 178, 0.4);
+    color: white;
+  }
+}
+
+.footerLogin {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  // background-color: peru;
+
+  .forgot {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 20px;
+    color: #5d3cb2;
+    cursor: pointer;
+    @media (max-width: 400px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .innerContainer {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    // background-color: red;
+    height: 100%;
+    .already {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 20px;
+      color: #667085;
+      // margin-top: 20px;
+      cursor: pointer;
+
+      @media (max-width: 400px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .signup {
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 20px;
+      color: #5d3cb2;
+      cursor: pointer;
+      @media (max-width: 400px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.checkBoxStyle {
+  display: flex;
+  align-items: center;
+  margin: 2rem auto;
+  gap: 1rem;
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 20px;
+  color: #101828;
+
+  .innerContainer {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    width: 100%;
+
+    input[type='checkbox']:unchecked {
+      background-color: red;
+    }
+
+    .checkedInput {
+      background-color: red;
+    }
+
+    @media (max-width: 400px) {
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .agreeToOyola {
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      color: #101828;
+      margin-left: 0.15rem;
+    }
+  }
+}
+
+// / Primary colour .checkbox {
+//   position: absolute;
+//   opacity: 0;
+
+//   // Text
+//   & + label {
+//     display: inline-block;
+//     position: relative;
+//     cursor: pointer;
+//     line-height: $checkbox-size;
+//     padding-left: $checkbox-size + 10;
+//     font-size: $checkbox-size - 2;
+//     font-family: sans-serif;
+//     color: #666; // Label colour
+
+//     // Checkbox
+//     &:before {
+//       position: absolute;
+//       display: block;
+//       left: 0;
+//       top: 0;
+//       content: "";
+//       background: transparent;
+//       width: $checkbox-size;
+//       height: $checkbox-size;
+
+//       box-shadow: inset 0 0 0 1px $checkbox-border;
+//       border-radius: 4px;
+//       transition: 200ms ease-in-out all;
+//     }
+
+//     // Tick
+//     &:after {
+//       position: absolute;
+//       display: block;
+//       top: 5px;
+//       left: 8px;
+//       content: "";
+//       width: 3px;
+//       height: 7px;
+//       border-right: 1px solid transparent;
+//       border-bottom: 1px solid transparent;
+//       transform: rotate(45deg);
+
+//       transition: 200ms ease-in-out all;
+//     }
+//   }
+
+//   // Hover
+//   & + label:hover {
+//     color: #333;
+//   }
+
+//   // Focus
+//   & + label:focus {
+//     outline: none;
+//   }
+
+//   // Checked
+//   &:checked {
+//     & + label {
+//       &:before {
+//         background: $checkbox-selected;
+//         box-shadow: none;
+//       }
+//       &:after {
+//         border-color: white;
+//       }
+//     }
+//   }
+
+//   // Disabled
+//   &:disabled {
+//     & + label {
+//       &:before {
+//         background: #f2f2f2; // Disabled colour
+//         box-shadow: none;
+//       }
+//       &:after {
+//         border-color: transparent;
+//       }
+//     }
+//   }
+
+//   // Disabled Checked
+//   &:checked:disabled {
+//     & + label {
+//       &:before {
+//         background: #f2f2f2;
+//         box-shadow: none;
+//       }
+//       &:after {
+//         border-color: #cecece;
+//       }
+//     }
+//   }
+// }
+
+// // Additional demo styling
+// .form-checkbox {
+//   position: relative;
+//   display: block;
+//   margin: 0 0 15px;
+// }
